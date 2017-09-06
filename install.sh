@@ -223,15 +223,15 @@ if [ ! -z "$esedbexportinstall" ]; then
 	echo -e "\e[1;32m[+]\e[0m I found esedbexport on your system"
 else
 	update=1
-	echo -e "\n\e[1;34m[*]\e[0m Downloading libesedb from authors google docs drive..."
+	echo -e "\n\e[1;34m[*]\e[0m Downloading libesedb from the fedora project..."
 	sleep 2
-	wget --no-check-certificate https://googledrive.com/host/0B3fBvzttpiiSN082cmxsbHB0anc/libesedb-alpha-20120102.tar.gz -O /tmp/smbexec-inst/libesedb-alpha-20120102.tar.gz
+	wget --no-check-certificate http://pkgs.fedoraproject.org/repo/pkgs/libesedb/libesedb-alpha-20120102.tar.gz/198a30c98ca1b3cb46d10a12bef8deaf/libesedb-alpha-20120102.tar.gz -O /tmp/smbexec-inst/libesedb-alpha-20120102.tar.gz
 	tar -zxf /tmp/smbexec-inst/libesedb-alpha-20120102.tar.gz -C /tmp/smbexec-inst/
 	currentpath=$PWD
 	echo -e "\n\e[1;34m[*]\e[0m Compiling esedbtools..."
 	sleep 2
 	cd /tmp/smbexec-inst/libesedb-20120102/
-	./configure --enable-static-executables=yes && make
+	CFLAGS="-g -O2 -Wall -fgnu89-inline" ./configure --enable-static-executables=yes && make
 	mv /tmp/smbexec-inst/libesedb-20120102/esedbtools /opt/esedbtools
 	cd "$currentpath"
 	if [ -e /opt/esedbtools/esedbexport ] && [ -x /opt/esedbtools/esedbexport ]; then

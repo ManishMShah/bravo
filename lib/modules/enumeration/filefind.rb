@@ -12,7 +12,7 @@ class Filefind < Poet::Scanner
 	# ie: %OFFICE%, %PASSWORD%, %KEYFILES%  
 	OFFICE_EXT = ".*\\.xlsx$, .*\\.xls$, .*\\.csv$, .*\\.doc$, .*\\.docx$, .*\\.pdf$"
 	PASSWORD_EXT = "accounts.xml$, unattend.xml$, unattend.txt$, sysprep.xml$, .*\\.passwd$, passwd$, shadow$, passwd~$, shadow~$, passwd-$, shadow-$, tomcat-users.xml$, RazerLoginData.xml$, ultravnc.ini$, profiles.xml$, spark.properties$, steam.vdf$, WinSCP.ini$, accounts.ini$, ws_ftp.ini$, svn.simple$, config.dyndns$, FileZilla.Server.xml$"
-	KEYFILES_EXT = ".*\\.kbdx$, .*\\.ppk$, id_rsa, .*\\.pem$, .*\\.crt$, .*\\.key$"
+	KEYFILES_EXT = ".*\\.kdbx$, .*\\.ppk$, id_rsa, .*\\.pem$, .*\\.crt$, .*\\.key$"
 	CONFIG_EXT = ".*\\.cfg$, .*\\.inf$, .*\\.ini$, .*\\.config$, .*\\.conf$, .*\\.setup$, .*\\.cnf$, pref.*\\.xml$, .*\\.preferences$, .*\\.properties$, config.*\\.xml$"
 	BATCH_EXT = ".*\\.bat$, .*\\.sh$, .*\\.ps$, .*\\.ps1$, .*\\.vbs$, .*\\.run$"
 	MAIL_EXT = ".*\\.pst$, .*\\.mbox$, .*\\.spool$"
