@@ -21,11 +21,11 @@ optparse = OptionParser.new do |opts|
 		options[:policy] = File.absolute_path(policy)
 	end
 
-	opts.on('-u' , '--user <USER>', 'Specify the password' ) do |creds|
+	opts.on('-u' , '--user <USER>', 'Specify the user account' ) do |creds|
 		options[:creds] = creds
 	end
 
-	opts.on('-p' , '--password <PASSWORD>', 'Specify the user account' ) do |pass|
+	opts.on('-p' , '--password <PASSWORD>', 'Specify the password' ) do |pass|
 		options[:pass] = pass
 	end
 
